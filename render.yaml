@@ -1,12 +1,12 @@
 services:
-  # Backend API Server
+  # Single service deployment - serves both backend and frontend
   - type: web
-    name: guess-the-time-server
+    name: guess-the-time
     env: node
     region: frankfurt
     plan: free
-    buildCommand: cd server && npm install && npm run build
-    startCommand: cd server && npm start
+    buildCommand: npm run build
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
@@ -14,17 +14,5 @@ services:
         value: 3001
       - key: CORS_ORIGIN
         sync: false
-
-  # Frontend Web App
-  - type: web
-    name: guess-the-time-web
-    env: node
-    region: frankfurt
-    plan: free
-    buildCommand: cd web && npm install && npm run build
-    startCommand: cd web && npm start
-    envVars:
-      - key: NODE_ENV
-        value: production
       - key: NEXT_PUBLIC_API_URL
         sync: false

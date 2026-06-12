@@ -7,9 +7,10 @@
     "dev:server": "npm run dev --prefix server",
     "dev:web": "npm run dev --prefix web",
     "build": "npm run build --prefix server && npm run build --prefix web",
-    "start": "concurrently \"npm run start --prefix server\" \"npm run start --prefix web\""
+    "start": "concurrently \"npm run start --prefix server\" \"npm run start --prefix web\"",
+    "install-all": "npm install && cd server && npm install && cd ../web && npm install"
   },
-  "devDependencies": {
+  "dependencies": {
     "concurrently": "^9.1.2"
   }
 }
