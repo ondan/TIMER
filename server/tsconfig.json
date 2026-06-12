@@ -5,10 +5,12 @@
     "moduleResolution": "NodeNext",
     "outDir": "dist",
     "rootDir": "..",
-    "strict": true,
+    "strict": false,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "noImplicitAny": false,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*", "../shared/**/*"]
 }

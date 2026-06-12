@@ -21,9 +21,8 @@ services:
     env: node
     region: frankfurt
     plan: free
-    rootDir: web
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: cd web && npm install && npm run build
+    startCommand: cd web && npm start
     envVars:
       - key: NODE_ENV
         value: production
