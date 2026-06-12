@@ -1,5 +1,4 @@
-services:
-  # Single service deployment - serves both backend and frontend
+git add .services:
   - type: web
     name: guess-the-time
     env: node
